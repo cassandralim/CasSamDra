@@ -2,7 +2,6 @@ package firstpackage;
 
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 /* FrameDemo.java requires no other files. */
