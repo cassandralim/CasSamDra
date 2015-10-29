@@ -20,6 +20,10 @@ public class FirstClass {
         emptyLabel.setPreferredSize(new Dimension(1750, 1000));
         frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
 
+        Player p = new Player("Sam");
+        JLabel label1 = new JLabel(p.getName() + " has won " + p.gamesWon );
+        frame.add(label1);
+        
         //Display the window.
         frame.pack();
         frame.setVisible(true);
