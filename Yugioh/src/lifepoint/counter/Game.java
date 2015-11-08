@@ -47,9 +47,13 @@ public class Game extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 		lb_p1 = new Label(player1.getName());
+		lb_p1.setAlignment(Pos.CENTER);
 		lb_p2 = new Label(player2.getName());
+		lb_p2.setAlignment(Pos.CENTER);
 		lb_lp1 = new Label("" + player1.getLifepoints());
+		lb_lp1.setAlignment(Pos.CENTER);
 		lb_lp2 = new Label("" + player2.getLifepoints());
+		lb_lp2.setAlignment(Pos.CENTER);
 		txt_Dam1 = new TextField("");
 		txt_Dam2 = new TextField("");
 		btn_AddLP1 = new Button("+");
@@ -78,14 +82,24 @@ public class Game extends Application{
 		setWidths();
 		attachCode();
 		
-		Scene scene = new Scene(root, 500, 500);
+		Scene scene = new Scene(root, 450, 200);
 		stage.setTitle("Yugioh Counter");
 		stage.setScene(scene);
 		stage.show();
 	}
 	
 	public void setWidths() {
-		return;
+		lb_p1.setPrefWidth(150);
+		lb_p2.setPrefWidth(150);
+		lb_lp1.setPrefWidth(150);
+		lb_lp2.setPrefWidth(150);
+		txt_Dam1.setPrefWidth(70);
+		txt_Dam2.setPrefWidth(70);
+		btn_AddLP1.setPrefWidth(70);
+		btn_SubLP1.setPrefWidth(70);
+		btn_AddLP2.setPrefWidth(70);
+		btn_SubLP2.setPrefWidth(70);
+		btn_End.setPrefWidth(150);
 	}
 
 	public void attachCode() {
