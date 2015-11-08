@@ -27,6 +27,10 @@ public class Game extends Application{
 	private Button btn_End;
 	private TextField txt_Dam1;
 	private TextField txt_Dam2;
+	private int hGap = 10;
+	private int vGap = 10;
+	private int height = 200;
+	private int width = 450;
 	
 	public Game() {
 		Player p1 = new Player("P1");
@@ -64,8 +68,8 @@ public class Game extends Application{
 		
 		GridPane root = new GridPane();
 		root.setAlignment(Pos.CENTER);
-		root.setHgap(10);
-		root.setVgap(10);
+		root.setHgap(hGap);
+		root.setVgap(vGap);
 		
 		root.add(lb_p1, 0, 0, 2, 1);
 		root.add(lb_p2, 2, 0, 2, 1);
@@ -82,24 +86,24 @@ public class Game extends Application{
 		setWidths();
 		attachCode();
 		
-		Scene scene = new Scene(root, 450, 200);
+		Scene scene = new Scene(root, width, height);
 		stage.setTitle("Yugioh Counter");
 		stage.setScene(scene);
 		stage.show();
 	}
 	
 	public void setWidths() {
-		lb_p1.setPrefWidth(150);
-		lb_p2.setPrefWidth(150);
-		lb_lp1.setPrefWidth(150);
-		lb_lp2.setPrefWidth(150);
-		txt_Dam1.setPrefWidth(70);
-		txt_Dam2.setPrefWidth(70);
-		btn_AddLP1.setPrefWidth(70);
-		btn_SubLP1.setPrefWidth(70);
-		btn_AddLP2.setPrefWidth(70);
-		btn_SubLP2.setPrefWidth(70);
-		btn_End.setPrefWidth(150);
+		lb_p1.setPrefWidth(width/3);
+		lb_p2.setPrefWidth(width/3);
+		lb_lp1.setPrefWidth(width/3);
+		lb_lp2.setPrefWidth(width/3);
+		txt_Dam1.setPrefWidth((width/3-hGap)/2);
+		txt_Dam2.setPrefWidth((width/3-hGap)/2);
+		btn_AddLP1.setPrefWidth((width/3-hGap)/2);
+		btn_SubLP1.setPrefWidth((width/3-hGap)/2);
+		btn_AddLP2.setPrefWidth((width/3-hGap)/2);
+		btn_SubLP2.setPrefWidth((width/3-hGap)/2);
+		btn_End.setPrefWidth(width/3);
 	}
 
 	public void attachCode() {
