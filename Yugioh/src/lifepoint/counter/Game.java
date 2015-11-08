@@ -113,8 +113,8 @@ public class Game extends Application{
 		int dam2 = integerConversion(txt_Dam2.getText());
 		if (e.getCode().equals(KeyCode.ENTER)) {
 			lp2 -= dam2;
-			player1.setLifepoints(lp2);
-			lb_lp1.setText("" + lp2);
+			player2.setLifepoints(lp2);
+			lb_lp2.setText("" + lp2);
 			txt_Dam2.setText("");
 		}
 	}
